@@ -1,0 +1,4 @@
+{
+    "port": 5000,
+    "uri": "mongodb+srv://MidMin:sUwTDLYEYrWEMC1W@cluster0.uhmdpem.mongodb.net/?retryWrites=true&w=majority"
+}
