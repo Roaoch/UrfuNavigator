@@ -1,4 +1,4 @@
-const {Router} = require("expess")
+const {Router} = require("express")
 const router = new Router()
 
 router.post("/register", async (req, res) => {
