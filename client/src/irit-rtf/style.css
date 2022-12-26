@@ -1,0 +1,125 @@
+h1 {
+    color: black;
+  }
+  
+  html {
+    box-sizing: border-box;
+  }
+  
+  *, *::before, *::after {
+    box-sizing: initial;
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  body {
+    font-family: sans-serif;
+    font-weight: 400;
+  }
+  
+  .list-reset {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .btn-reset {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  .input-reset {
+    width: 80%;
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+  }
+  
+  .flex {
+    display: flex;
+  }
+
+  .border-reset {
+    border-radius: 0;
+  }
+  
+  .container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 85vh;
+    width: 93vw;
+    padding: 16px 12px;
+    margin: 0;
+  }
+  
+  .search {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 28px;
+  }
+  
+  .searc-string {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
+    margin-left: auto;
+    background-color: #F4F4F2;
+    border-radius: 12px;
+    padding: 5px 5px 5px 35px;
+    background-image: url('../img/loupe.svg');
+    background-repeat: no-repeat;
+    background-position: left;
+    background-position-x: 10px;
+  }
+  
+  .searc-string-input {
+    width: 97%;
+    padding: 5px;
+    font-size: 14px;
+  }
+  
+  .loupe {
+    margin-left: 7px;
+    margin-right: 10px;
+  }
+
+  .ins-name {
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 26px;
+    color: #000000;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.buttons-floors {
+    position: absolute;
+}
+
+.button-floor {
+    padding: 5px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    height: 23px;
+    width: 23px;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 26px;
+    color: #000000;
+}
+
+.button-floor:hover {
+    color: white;
+    background-color: #000000;
+}
