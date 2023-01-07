@@ -21,6 +21,8 @@
     "express": "^4.18.1",
     "indoorjs": "^1.0.27",
     "mongoose": "^6.6.5",
+    "ngraph.graph": "^20.0.1",
+    "ngraph.path": "^1.4.0",
     "react": "^18.2.0",
     "react-router-dom": "^6.4.2"
   },
