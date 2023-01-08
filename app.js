@@ -1,7 +1,7 @@
 const express = require("express");
 const config = require("config");
 const mongoose = require("mongoose");
-const getPath = require('./way_finder.js');
+const getPath = require("./paths/way_finder.js")
 
 const app = express();
 
@@ -12,9 +12,18 @@ async function start() {
         await mongoose.connect(config.get("uri"), {
             useNewUrlParser: true,
             useUnifiedTopology: true,
-        })
+        });
 
-        getPath();
+        app.get("/path", async (req, res) => {
+            let points;
+            await getPath(
+                req.query.inst, 
+                req.query.start, 
+                req.query.end
+            )
+            .then(e => points = e);
+            res.send(points);
+        });
 
         app.listen(PORT, () => console.log(`Started, Port: ${PORT}`));
     } catch(e) {
@@ -23,4 +32,4 @@ async function start() {
     }
 }
 
-start()
+start();
