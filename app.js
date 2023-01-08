@@ -14,12 +14,16 @@ async function start() {
             useUnifiedTopology: true,
         });
 
-        getPath(
-            'ИРИТ-РТФ', 
-            4, 
-            'd0ebc4f3-46d4-46fc-804b-7f59e9b5e512', 
-            '91f57785-d2d8-43cf-b0cb-e6f2c6f05f37'
-        ).then(e => console.log(e));
+        app.get("/path", async (req, res) => {
+            let points;
+            await getPath(
+                req.query.inst, 
+                req.query.start, 
+                req.query.end
+            )
+            .then(e => points = e);
+            res.send(points);
+        });
 
         app.listen(PORT, () => console.log(`Started, Port: ${PORT}`));
     } catch(e) {

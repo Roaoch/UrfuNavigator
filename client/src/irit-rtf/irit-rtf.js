@@ -1,4 +1,5 @@
 import React from "react";
+/*import { getShortestPath } from '../utils/paths.js'*/
 import './style.css';
 import zeroFloor from '../img/ИРИТ-РТФ-0-этаж.jpg'
 import firstFloor from '../img/ИРИТ-РТФ-1-этаж.jpg'
@@ -28,6 +29,8 @@ function ShowIrit() {
     </div>
   );
 };
+
+/*console.log(getShortestPath("ИРИТ-РТФ", "Р-407", "Р-402а"));*/
 
 var maps = {
   4 : forhtFloor,

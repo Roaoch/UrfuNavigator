@@ -2,12 +2,33 @@ const createGraph = require('ngraph.graph');
 const paths = require('ngraph.path');
 const institut = require('./models.js');
 
-async function getPath(instId, startFloor, startId, endId) {
+async function getPath(instId, startName, endName) {
     const result = await institut.model.findOne( {id: instId})
         .then(inst => {
-            return searchPath(getById(inst.flors, startFloor).points, startId, endId).reverse();
+            const start = getByName(inst.flors, startName);
+            const end = getByName(inst.flors, endName);
+
+            if (start.floor === end.floor) {
+                return searchPath(getById(inst.flors, Number(start.floor)).points, start.point.id, end.point.id).reverse();
+            }
+            else {
+                return undefined;
+            }
         });
     return result;
+}
+
+function getByName(floors, name) {
+    for (floor of floors) {
+        const point = floor.points.find(el => el.name === name);
+        if (point) {
+            return {
+                floor: floor.id, 
+                point: point
+            };
+        }
+        
+    }
 }
 
 function searchPath(points, start, end) {
