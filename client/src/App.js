@@ -1,13 +1,16 @@
 import React from "react";
 import './index.css';
-import imageIrit from './img/irit-icon.jpg';
-import imageGyk from './img/guk-icon.png'
+import mainIcon from './img/icon.jpg'
+import iritIcon from './img/irit-icon.jpg';
+import gykIcon from './img/guk-icon.png';
+import emptyIcon from './img/empty-icon.png'
 import { Link } from "react-router-dom";
 
 function App() {
     return (
         <div className="container">
             <div className="search flex">
+                <img className="icon" src={ mainIcon } alt='Иконка Урфу'/>
                 {/* <button className="btn-menu btn-reset"></button> */}
                 <div className="searc-string flex">
                     <input className="input-reset searc-string-input" type="text" name="input-point" id="" placeholder="Аудитория или название места"/>
@@ -26,7 +29,7 @@ function App() {
                     <li className="institutions-list-item flex">
                         <Link to="/guk">
                             <button className="link-irit btn-reset flex">
-                                <img className="institutions-icon border-reset" src={imageGyk} alt=""/>
+                                <img className="institutions-icon border-reset" src={ gykIcon } alt=""/>
                                 <p className="institution-name">ГУК</p>
                             </button>
                         </Link>
@@ -34,7 +37,7 @@ function App() {
                     <li className="institutions-list-item flex">
                         <Link to="/irit">
                             <button className="link-irit btn-reset flex">
-                                <img className="institutions-icon" src={imageIrit} alt=""/>
+                                <img className="institutions-icon" src={ iritIcon } alt=""/>
                                 <p className="institution-name">ИРИТ-РТФ</p>
                             </button>
                         </Link>
@@ -42,7 +45,7 @@ function App() {
                     <li className="institutions-list-item flex">
                         <Link to="">
                             <button className="link-irit btn-reset flex">
-                                <img className="institutions-icon" src={imageIrit} alt="" />
+                                <img className="institutions-icon" src={ emptyIcon } alt="" />
                                 <p className="institution-name">ИНМТ</p>
                             </button>
                         </Link>
@@ -50,15 +53,15 @@ function App() {
                     <li className="institutions-list-item flex">
                         <Link to="">
                             <button className="link-irit btn-reset flex">
-                                <img class="institutions-icon" src={imageIrit} alt=""/>
-                                <p class="institution-name">ФТИ</p>
+                                <img className="institutions-icon" src={ emptyIcon } alt=""/>
+                                <p className="institution-name">ФТИ</p>
                             </button>
                         </Link>
                     </li>
                     <li className="institutions-list-item flex">
                         <Link to="">
                             <button className="link-irit btn-reset flex">
-                                <img className="institutions-icon" src={imageIrit} alt=""/>
+                                <img className="institutions-icon" src={ emptyIcon } alt=""/>
                                 <p className="institution-name">ИНЭУ</p>
                             </button>
                         </Link>
@@ -66,7 +69,7 @@ function App() {
                     <li className="institutions-list-item flex">
                         <Link to="">
                             <button className="link-irit btn-reset flex">
-                                <img className="institutions-icon" src={imageIrit} alt=""/>
+                                <img className="institutions-icon" src={ emptyIcon } alt=""/>
                                 <p className="institution-name">ИФКСиМП</p>
                             </button>
                         </Link>
@@ -74,7 +77,7 @@ function App() {
                     <li className="institutions-list-item flex">
                         <Link to="">
                             <button className="link-irit btn-reset flex">
-                                <img className="institutions-icon" src={imageIrit} alt=""/>
+                                <img className="institutions-icon" src={ emptyIcon } alt=""/>
                                 <p className="institution-name">ИЕНиМ</p>
                             </button>
                         </Link>
@@ -82,7 +85,7 @@ function App() {
                     <li className="institutions-list-item flex">
                         <Link to="">
                             <button className="link-irit btn-reset flex">
-                                <img className="institutions-icon" src={imageIrit} alt=""/>
+                                <img className="institutions-icon" src={ emptyIcon } alt=""/>
                                 <p className="institution-name">ИСА</p>
                             </button>
                         </Link>
@@ -90,7 +93,7 @@ function App() {
                     <li className="institutions-list-item flex">
                         <Link to="">
                             <button className="link-irit btn-reset flex">
-                                <img className="institutions-icon" src={imageIrit} alt=""/>
+                                <img className="institutions-icon" src={ emptyIcon } alt=""/>
                                 <p className="institution-name">ИнФО</p>
                             </button>
                         </Link>
@@ -98,7 +101,7 @@ function App() {
                     <li className="institutions-list-item flex">
                         <Link to="">
                             <button className="link-irit btn-reset flex">
-                                <img className="institutions-icon" src={imageIrit} alt=""/>
+                                <img className="institutions-icon" src={ emptyIcon } alt=""/>
                                 <p className="institution-name">УГИ</p>
                             </button>
                         </Link>
@@ -106,7 +109,7 @@ function App() {
                     <li className="institutions-list-item flex">
                         <Link to="">
                             <button className="link-irit btn-reset flex">
-                                <img className="institutions-icon" src={imageIrit} alt=""/>
+                                <img className="institutions-icon" src={ emptyIcon } alt=""/>
                                 <p className="institution-name">УралЭНИН</p>
                             </button>
                         </Link>
@@ -114,7 +117,7 @@ function App() {
                     <li className="institutions-list-item flex">
                         <Link to="">
                             <button className="link-irit btn-reset flex">
-                                <img className="institutions-icon" src={imageIrit} alt=""/>
+                                <img className="institutions-icon" src={ emptyIcon } alt=""/>
                                 <p className="institution-name">ХТИ</p>
                             </button>
                         </Link>

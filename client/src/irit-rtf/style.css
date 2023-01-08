@@ -119,7 +119,12 @@ h1 {
     color: #000000;
 }
 
-.button-floor:hover {
+.button-floor-active {
+  color: white;
+  background-color: #000000;
+}
+
+/* .button-floor:hover {
     color: white;
     background-color: #000000;
-}
+} */
