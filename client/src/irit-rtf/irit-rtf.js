@@ -21,7 +21,7 @@ function ShowIrit() {
                 <li className="floor"><button className="button-floor btn-reset" value="4">4</button></li>
                 <li className="floor"><button className="button-floor btn-reset" value="3">3</button></li>
                 <li className="floor"><button className="button-floor btn-reset" value="2">2</button></li>
-                <li className="floor"><button className="button-floor btn-reset" value="1">1</button></li>
+                <li className="floor"><button className="button-floor btn-reset button-floor-active" value="1">1</button></li>
                 <li className="floor"><button className="button-floor btn-reset" value="0">0</button></li>
             </ul>
             <img className="img-map" src={firstFloor} alt=""/>
@@ -29,6 +29,9 @@ function ShowIrit() {
     </div>
   );
 };
+
+var floors = document.querySelector('.buttons-floors');
+var mapOnScreen = document.querySelector('.img-map');
 
 /*console.log(getShortestPath("ИРИТ-РТФ", "Р-407", "Р-402а"));*/
 
@@ -40,40 +43,66 @@ var maps = {
   0 : zeroFloor
 };
 
-var floors = document.querySelectorAll('.button-floor');
-var mapOnScreen = document.querySelector('.img-map');
+if (mapOnScreen) {
+  floors.addEventListener('click', (evt) => {
+    const mapBtn = evt.target.closest('.button-floor');
 
-var addThumbnailClickHandler = function (floor, map) {
-  floor.addEventListener('click', function () {
-    // floors.forEach((f) => f.classList.remove('button-floor-active'))
-    // floor.classList.add('button-floor-active');
-    mapOnScreen.src = map;
+    if (mapBtn) {
+      floors.querySelectorAll('.button-floor').forEach((f) => f.classList.remove('button-floor-active'));
 
-      // mapOnScreen.src = new Indoor.Map(this._canv, {
-      //   floorplan: new Indoor.Floor({
-      //     url: map,
-      //     width: this.mapImg.width,
-      //     height: this.mapImg.height  2,
-      //     opacity: 0.8,
-      //     zIndex: 1
-      //   }),
-      //   height: window.innerHeight,
-      //   minZoom: 0.1,
-      //   maxZoom: 100,
-      //   center: {
-      //     x: 0,
-      //     y: 0
-      //   }
-      // })
-  });
-};
+      if (mapBtn.value === '4') {
+        mapOnScreen.src = maps[4];
+      } else if (mapBtn.value === '3') {
+        mapOnScreen.src = maps[3];
+      } else if (mapBtn.value === '2') {
+        mapOnScreen.src = maps[2];
+      } else if (mapBtn.value === '1') {
+        mapOnScreen.src = maps[1];
+      } else {
+        mapOnScreen.src = maps[0];
+      }
 
-for (var i = 0; i < floors.length; i++) {
-  addThumbnailClickHandler(floors[i], maps[floors[i].value]);
+      mapBtn.classList.add('button-floor-active');
+    }
+  })
 }
 
-// const mapEl = document.querySelector('.container');
 
+
+// var floors = document.querySelectorAll('.buttons-floor');
+
+// var addThumbnailClickHandler = function (floor, map) {
+//   floor.addEventListener('click', function () {
+//     floors.forEach((f) => f.classList.remove('button-floor-active'));
+//     floor.classList.add('button-floor-active');
+//     mapOnScreen.src = map;
+
+//       // mapOnScreen.src = new Indoor.Map(this._canv, {
+//       //   floorplan: new Indoor.Floor({
+//       //     url: map,
+//       //     width: this.mapImg.width,
+//       //     height: this.mapImg.height  2,
+//       //     opacity: 0.8,
+//       //     zIndex: 1
+//       //   }),
+//       //   height: window.innerHeight,
+//       //   minZoom: 0.1,
+//       //   maxZoom: 100,
+//       //   center: {
+//       //     x: 0,
+//       //     y: 0
+//       //   }
+//       // })
+//   });
+// };
+
+// for (var i = 0; i < floors.length; i++) {
+//   addThumbnailClickHandler(floors[i], maps[floors[i].value]);
+// }
+
+
+
+// const mapEl = document.querySelector('.container');
 // const Indoor = require('indoorjs')
  
 // const map = new Indoor.Map(mapEl, {

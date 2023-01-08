@@ -58,6 +58,11 @@ body {
   width: 100vh;
 }
 
+.icon {
+  padding-right: 10px;
+  border-radius: 100px;
+}
+
 .search {
   height: 7%;
   margin-bottom: 28px;
