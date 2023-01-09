@@ -43,7 +43,8 @@ async function getPath(instId, startName, endName) {
             ).reverse();
 
             return [startPart, endPart];
-        });
+        })
+        .catch(err => console.log(err));
     return result;
 }
 
