@@ -69,22 +69,28 @@ h1 {
     margin-bottom: 28px;
   }
   
-  .searc-string {
-    flex-wrap: wrap;
+  .search-field {
     justify-content: flex-start;
     width: 100%;
     margin-left: auto;
-    background-color: #F4F4F2;
+    /* background-color: #F4F4F2; */
     border-radius: 12px;
-    padding: 5px 5px 5px 35px;
-    background-image: url('../img/loupe.svg');
-    background-repeat: no-repeat;
-    background-position: left;
-    background-position-x: 10px;
+    padding: 5px 5px 5px 10px;
+  }
+
+  .search-field-text {
+    align-self: center;
+    margin-right: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    color: #9D9B98;
   }
   
-  .searc-string-input {
-    width: 97%;
+  .search-string-input {
+    margin-right: 10px;
+    background-color: #F4F4F2;
+    width: 30%;
     padding: 5px;
     font-size: 14px;
   }
