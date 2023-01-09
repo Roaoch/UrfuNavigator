@@ -30,7 +30,10 @@ function ShowIrit() {
   );
 };
 
-/*console.log(getShortestPath("ИРИТ-РТФ", "Р-407", "Р-402а"));*/
+/*async function test() {
+  console.log(await getShortestPath("ИРИТ-РТФ", "Р-407", "Р-122"));
+}
+test();*/
 
 var maps = {
   4 : forhtFloor,

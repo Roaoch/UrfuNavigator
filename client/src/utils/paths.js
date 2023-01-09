@@ -1,6 +1,7 @@
 async function getShortestPath(inst, startName, endName) {
-    const result = await fetch(`/path?inst=${inst}&start=${startName}&end=${endName}`);
-    return result.json();
+    const response = await fetch(`/path?inst=${inst}&start=${startName}&end=${endName}`);
+    const result = response.json();
+    return result;
 }
 
 export { getShortestPath };
